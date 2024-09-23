@@ -179,6 +179,8 @@ function addLogToHistory(amount, purpose, place) {
     historyItem.className = `flex flex-col border-2 p-5 rounded-xl w-full gap-5`;
     historyItem.innerHTML = `<h1 class="text-xl font-bold">${amount} Taka is Donated for ${purpose} at ${place}, Bangladesh</h1> <p class="text-secondaryTextColor">Date : ${new Date()}</p>`;
 
+    document.getElementById("noHistory").classList.remove("flex");
+    document.getElementById("noHistory").classList.add("hidden");
     historyLogs.prepend(historyItem);
 
 }

@@ -8,12 +8,12 @@
 
     <title>PH-Assignment-5</title>
 </head>
-<body class="relative min-h-[100vh]">
+<body class="relative bg-[#f9f7f3] min-h-[100vh]">
     
 
     <header class="w-full  backdrop-blur-lg sticky top-0" id="headerSection">
 
-        <div class="bg-[#f9f7f3] p-3">
+        <div class="bg-transparent p-3">
             <div class="max-w-screen-xl mx-auto flex justify-between items-center">
                 <a href="./blog.html"><button class="py-3 px-5 font-bold bg-primary rounded-lg">Blog</button></a>
                 
@@ -31,7 +31,7 @@
             
         </div>
 
-        <div class="w-full flex gap-5 justify-center items-center py-5  ">
+        <div class="w-full flex gap-5 justify-center items-center py-5 ">
             <button class="font-bold py-3 px-6 rounded-lg border-2 btn-active" id="donationBtn">Donation</button>
             <button class="font-bold py-3 px-6 rounded-lg border-2" id="historyBn">History</button>
         </div>
@@ -41,7 +41,7 @@
 
 
 
-    <section class="p-5" id="donateSection">
+    <section class="p-5 bg-white" id="donateSection">
         <div class="max-w-screen-xl mx-auto flex flex-col gap-10 justify-between items-center">
             <div class="flex md-p:flex-col p-5 gap-5 border-2 rounded-3xl">
                 <img class="w-1/2 md-p:w-full" src="./assets/noakhali.png" alt="" >
@@ -106,8 +106,14 @@
     </section>
 
 
-    <section class="hidden p-5" id="historySection">
+    <section class="hidden p-5 bg-white" id="historySection">
         <div class="max-w-screen-xl mx-auto flex flex-col gap-10 justify-between items-center" id="historyLogs">
+
+            <div class="flex flex-col items-center" id="noHistory">
+                
+                <img class="w-[20%]" src="./assets/lowbalance.png" alt="">
+                <h1 class="text-4xl font-bold mt-5">No history found</h1>
+            </div>
 
             <!-- <div class="flex flex-col border-2 p-5 rounded-xl w-full gap-5">
                 <h1 class="text-xl font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
@@ -119,7 +125,7 @@
 
 
 
-    <footer class="h-20 w-full bg-slate-500 mt-10 bottom-0">
+    <footer class="h-20 w-fullmt-10 bottom-0">
 
     </footer>
 
