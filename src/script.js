@@ -77,6 +77,79 @@ noakhaliDonateBtn.addEventListener("click", ()=>{
 })
 
 
+feniDonateBtn.addEventListener("click", ()=>{
+    let feniDonatedAmmountNum = parseFloat(feniDonatedAmmount.innerText);
+    let feniInputNum = parseFloat(feniInput.value);
+
+    if (feniInputNum > parseFloat(balance.innerText)) {
+        let failmsg = "Low Balance";
+        let cancelImgSrc = "./assets/cancel.png";
+        let failPMsg = "Please add more fund to donate";
+        let failSpanMsg = "Try again"
+        showModal(failmsg, cancelImgSrc, failPMsg, failSpanMsg);
+        return;
+    }else if(feniInput.value=="" || feniInputNum <= 0){
+        let noInputMsg = "Invalid Iput";
+        let noInputImgSrc = "./assets/cancel.png";
+        let noInputPMsg = "Please a valid input to donate";
+        let noInputSpanMsg = "Try Again";
+        showModal(noInputMsg, noInputImgSrc, noInputPMsg, noInputSpanMsg);
+        return;
+    }
+    
+    
+
+    feniDonatedAmmountNum +=  feniInputNum;
+    feniDonatedAmmount.innerText = feniDonatedAmmountNum; 
+    updateBalance(feniInputNum);
+    let successMsg = "Congrates";
+    let successImgSrc = "./assets/coin.png";
+    let successPMsg = "You have donated for HumanKind"
+    let successSpanMsg = "Successfully"
+    showModal(successMsg, successImgSrc, successPMsg, successSpanMsg);
+    addLogToHistory(feniInputNum, "Flood", "Feni")
+
+})
+
+
+quotaDonateBtn.addEventListener("click", ()=>{
+    let quotaDonatedAmmountNum = parseFloat(quotaDonatedAmmount.innerText);
+    let quotaInputNum = parseFloat(quotaInput.value);
+
+    if (quotaInputNum > parseFloat(balance.innerText)) {
+        let failmsg = "Low Balance";
+        let cancelImgSrc = "./assets/cancel.png";
+        let failPMsg = "Please add more fund to donate";
+        let failSpanMsg = "Try again"
+        showModal(failmsg, cancelImgSrc, failPMsg, failSpanMsg);
+        return;
+    }else if(quotaInput.value=="" || quotaInputNum <= 0){
+        let noInputMsg = "Invalid Iput";
+        let noInputImgSrc = "./assets/cancel.png";
+        let noInputPMsg = "Please a valid input to donate";
+        let noInputSpanMsg = "Try Again";
+        showModal(noInputMsg, noInputImgSrc, noInputPMsg, noInputSpanMsg);
+        return;
+    }
+    
+    
+
+    quotaDonatedAmmountNum +=  quotaInputNum;
+    noakhaniDonatedAmmount.innerText = quotaDonatedAmmountNum; 
+    updateBalance(quotaInputNum);
+    let successMsg = "Congrates";
+    let successImgSrc = "./assets/coin.png";
+    let successPMsg = "You have donated for HumanKind"
+    let successSpanMsg = "Successfully"
+    showModal(successMsg, successImgSrc, successPMsg, successSpanMsg);
+    addLogToHistory(quotaInputNum, "Injured", "Quota Movement")
+
+})
+
+
+
+
+
 
 function updateBalance(val){
     let balanceNum = parseFloat(balance.innerText);
@@ -109,3 +182,5 @@ function addLogToHistory(amount, purpose, place) {
     historyLogs.prepend(historyItem);
 
 }
+
+

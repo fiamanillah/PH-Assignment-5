@@ -7,4 +7,10 @@
     .btn-active {
         @apply bg-primary border-primary;
     }
+    .faq-hidden{
+        @apply  h-0 px-5 py-0;
+    }
+    .faq-active{
+        @apply  h-auto pt-3 pb-7;
+    }
 }

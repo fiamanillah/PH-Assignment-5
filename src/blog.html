@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="w-full  backdrop-blur-lg sticky top-0" id="headerSection">
+
+        <div class="bg-[#f9f7f3] p-3">
+            <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+                <a href="./index.html"><button class="py-3 px-5 font-bold bg-primary rounded-lg">Home</button></a>
+                
+                <div class="flex gap-2 justify-center items-center">
+                    <img src="./assets/logo.png" alt="">
+                    <span class="font-bold md-p:hidden">Donate Bangladesh</span>
+                </div>
+                <div class="flex gap-2 justify-center items-center">
+                    <img src="./assets/coin.png" alt="">
+                    <span class="font-bold" id="balance">5500</span>
+                    <span class="font-bold">BDT</span>
+                </div>
+            </div>
+    
+            
+        </div>
+        
+    </header>
+
+
+    <section class="p-5">
+
+        <div class="max-w-screen-xl mx-auto flex flex-col gap-10 justify-between items-start">
+            <div class="flex items-center text-4xl font-bold gap-4">Important FAQ <img class="w-12" src="./assets/faq.gif" alt=""></div>
+
+            <div class=" border-2 rounded-lg w-full">
+                <div class="w-full border-b-2">
+                    <div class=" px-[2%] pt-5 pb-3 text-2xl flex items-center justify-between cursor-pointer faq-ques">What is the document object model (DOM)? <img class="w-5 h-5 mx-[1%] duration-100 select-none" src="./assets/down-chevron.png" alt=""></div>
+                    <div class=" text-secondaryTextColor faq-hidden overflow-hidden duration-100">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, allowing developers to interact with and manipulate the document's structure, style, and content dynamically.</div>
+                </div>
+
+                <div class="w-full border-b-2">
+                    <div class=" px-[2%] pt-5 pb-3 text-2xl flex items-center justify-between cursor-pointer faq-ques">How do you select an element from the DOM?
+                        <img class="w-5 h-5 mx-[1%] duration-100 select-none" src="./assets/down-chevron.png" alt=""></div>
+                    <div class=" text-secondaryTextColor faq-hidden overflow-hidden duration-100">TTo select an element from the DOM, you can use methods like getElementById() to select by ID, getElementsByClassName() to select by class, or querySelector() to select the first element matching a CSS selector. For selecting multiple elements, you can use querySelectorAll() or getElementsByTagName(). These methods allow you to access and manipulate elements on a web page dynamically using JavaScript.</div>
+                </div>
+
+                <div class="w-full border-b-2">
+                    <div class=" px-[2%] pt-5 pb-3 text-2xl flex items-center justify-between cursor-pointer faq-ques">What is event delegation in the context of the DOM, and why is it useful? <img class="w-5 h-5 mx-[1%] duration-100 select-none" src="./assets/down-chevron.png" alt=""></div>
+                    <div class=" text-secondaryTextColor faq-hidden overflow-hidden duration-100">Event delegation is a technique where you attach a single event listener to a parent element to handle events triggered by its child elements. Instead of adding listeners to each child individually, the event is captured by the parent through event bubbling and then delegated to the appropriate child. This improves performance by minimizing the number of event listeners, especially when dealing with many child elements. It also allows you to handle dynamically added elements without the need to attach new listeners. This technique is commonly used for efficient event handling in large or frequently changing DOM structures.</div>
+                </div>
+
+                <div class="w-full border-b-2">
+                    <div class=" px-[2%] pt-5 pb-3 text-2xl flex items-center justify-between cursor-pointer faq-ques">How do you manipulate an element's attributes and styles using the DOM?<img class="w-5 h-5 mx-[1%] duration-100 select-none" src="./assets/down-chevron.png" alt=""></div>
+                    <div class=" text-secondaryTextColor faq-hidden overflow-hidden duration-100">To manipulate an element's attributes and styles using the DOM, you can use methods like setAttribute(), getAttribute(), and removeAttribute() for attributes. For styling, you can modify the style property directly, such as element.style.color = 'blue'; to change text color. You can also manage CSS classes with classList, using methods like add(), remove(), and toggle(). This allows you to dynamically change an element's appearance and behavior based on user interactions or other conditions. Overall, these methods enable flexible and interactive web development.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="./blog.js"></script>
+</body>
+</html>
