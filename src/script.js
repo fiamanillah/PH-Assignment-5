@@ -19,8 +19,6 @@ const historyLogs = document.getElementById("historyLogs");
 
 
 
-console.log(new Date());
-
 
 donationBtn.addEventListener("click", ()=>{
     donateSection.classList.remove("hidden");
