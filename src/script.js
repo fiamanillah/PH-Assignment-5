@@ -20,7 +20,7 @@ const historyLogs = document.getElementById("historyLogs");
 
 
 
-donationBtn.addEventListener("click", ()=>{
+donationBtn.addEventListener("click", () => {
     donateSection.classList.remove("hidden");
     donateSection.classList.add("block");
     historySection.classList.remove("block");
@@ -30,7 +30,7 @@ donationBtn.addEventListener("click", ()=>{
 
 });
 
-historyBn.addEventListener("click", ()=>{
+historyBn.addEventListener("click", () => {
     historySection.classList.remove("hidden");
     historySection.classList.add("block");
     donateSection.classList.remove("block");
@@ -40,7 +40,7 @@ historyBn.addEventListener("click", ()=>{
 });
 
 
-noakhaliDonateBtn.addEventListener("click", ()=>{
+noakhaliDonateBtn.addEventListener("click", () => {
     let noakhaniDonatedAmmountNum = parseFloat(noakhaniDonatedAmmount.innerText);
     let noakhaliInputNum = parseFloat(noakhaliInput.value);
 
@@ -51,19 +51,19 @@ noakhaliDonateBtn.addEventListener("click", ()=>{
         let failSpanMsg = "Try again"
         showModal(failmsg, cancelImgSrc, failPMsg, failSpanMsg);
         return;
-    }else if(noakhaliInput.value=="" || noakhaliInputNum <= 0){
+    } else if (noakhaliInput.value == "" || noakhaliInputNum <= 0) {
         let noInputMsg = "Invalid Iput";
         let noInputImgSrc = "./assets/cancel.png";
-        let noInputPMsg = "Please a valid input to donate";
+        let noInputPMsg = "Please enter a valid input to donate";
         let noInputSpanMsg = "Try Again";
         showModal(noInputMsg, noInputImgSrc, noInputPMsg, noInputSpanMsg);
         return;
     }
-    
-    
 
-    noakhaniDonatedAmmountNum +=  noakhaliInputNum;
-    noakhaniDonatedAmmount.innerText = noakhaniDonatedAmmountNum; 
+
+
+    noakhaniDonatedAmmountNum += noakhaliInputNum;
+    noakhaniDonatedAmmount.innerText = noakhaniDonatedAmmountNum;
     updateBalance(noakhaliInputNum);
     let successMsg = "Congrates";
     let successImgSrc = "./assets/coin.png";
@@ -75,7 +75,7 @@ noakhaliDonateBtn.addEventListener("click", ()=>{
 })
 
 
-feniDonateBtn.addEventListener("click", ()=>{
+feniDonateBtn.addEventListener("click", () => {
     let feniDonatedAmmountNum = parseFloat(feniDonatedAmmount.innerText);
     let feniInputNum = parseFloat(feniInput.value);
 
@@ -86,19 +86,19 @@ feniDonateBtn.addEventListener("click", ()=>{
         let failSpanMsg = "Try again"
         showModal(failmsg, cancelImgSrc, failPMsg, failSpanMsg);
         return;
-    }else if(feniInput.value=="" || feniInputNum <= 0){
+    } else if (feniInput.value == "" || feniInputNum <= 0) {
         let noInputMsg = "Invalid Iput";
         let noInputImgSrc = "./assets/cancel.png";
-        let noInputPMsg = "Please a valid input to donate";
+        let noInputPMsg = "Please enter a valid input to donate";
         let noInputSpanMsg = "Try Again";
         showModal(noInputMsg, noInputImgSrc, noInputPMsg, noInputSpanMsg);
         return;
     }
-    
-    
 
-    feniDonatedAmmountNum +=  feniInputNum;
-    feniDonatedAmmount.innerText = feniDonatedAmmountNum; 
+
+
+    feniDonatedAmmountNum += feniInputNum;
+    feniDonatedAmmount.innerText = feniDonatedAmmountNum;
     updateBalance(feniInputNum);
     let successMsg = "Congrates";
     let successImgSrc = "./assets/coin.png";
@@ -110,7 +110,7 @@ feniDonateBtn.addEventListener("click", ()=>{
 })
 
 
-quotaDonateBtn.addEventListener("click", ()=>{
+quotaDonateBtn.addEventListener("click", () => {
     let quotaDonatedAmmountNum = parseFloat(quotaDonatedAmmount.innerText);
     let quotaInputNum = parseFloat(quotaInput.value);
 
@@ -121,19 +121,19 @@ quotaDonateBtn.addEventListener("click", ()=>{
         let failSpanMsg = "Try again"
         showModal(failmsg, cancelImgSrc, failPMsg, failSpanMsg);
         return;
-    }else if(quotaInput.value=="" || quotaInputNum <= 0){
+    } else if (quotaInput.value == "" || quotaInputNum <= 0) {
         let noInputMsg = "Invalid Iput";
         let noInputImgSrc = "./assets/cancel.png";
-        let noInputPMsg = "Please a valid input to donate";
+        let noInputPMsg = "Please enter a valid input to donate";
         let noInputSpanMsg = "Try Again";
         showModal(noInputMsg, noInputImgSrc, noInputPMsg, noInputSpanMsg);
         return;
     }
-    
-    
 
-    quotaDonatedAmmountNum +=  quotaInputNum;
-    noakhaniDonatedAmmount.innerText = quotaDonatedAmmountNum; 
+
+
+    quotaDonatedAmmountNum += quotaInputNum;
+    noakhaniDonatedAmmount.innerText = quotaDonatedAmmountNum;
     updateBalance(quotaInputNum);
     let successMsg = "Congrates";
     let successImgSrc = "./assets/coin.png";
@@ -149,7 +149,7 @@ quotaDonateBtn.addEventListener("click", ()=>{
 
 
 
-function updateBalance(val){
+function updateBalance(val) {
     let balanceNum = parseFloat(balance.innerText);
     balanceNum = balanceNum - val
     balance.innerText = balanceNum;
@@ -157,13 +157,13 @@ function updateBalance(val){
 
 
 
-modalCloseBtn.addEventListener("click", ()=>{
+modalCloseBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
 })
 
 
-function showModal(h1Msg, imgSrc, pMsg, spanMsg){
+function showModal(h1Msg, imgSrc, pMsg, spanMsg) {
     document.querySelector("#modal div h1").innerText = h1Msg;
     document.querySelector("#modal div img").src = imgSrc;
     document.querySelector("#modal div p").innerText = pMsg;
